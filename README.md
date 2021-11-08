@@ -1,8 +1,20 @@
-# supervised_graph_transformerConv_AML
+# Supervised Graph Transformer for Money Laundering Detection
 This notebook demonstrates the potential of graph transformer architecture for detecting suspicious accounts based on their transactions.
 Dataset is a synthetic transactions graph made by AMLSIM. 
 
 Dataset consists of ~ 800k Transactions
-                    ~ 20k Accounts
+
+                    and 20k Accounts
                     
-Network is optimized to classify ndoes based on their transactional behavior into Suspicious (Fraud) or Normal
+Network is trained to classify ndoes based on their transactional behavior into Suspicious (Fraud) or Normal
+
+# Network Architecture:
+GCN(
+  (conv1): TransformerConv(1, 64, heads=3)
+  (conv2): TransformerConv(192, 64, heads=3)
+  (linear1): Linear(in_features=192, out_features=32, bias=True)
+  (linear2): Linear(in_features=32, out_features=2, bias=True)
+)
+
+# Free Parameters
+157154
